@@ -1,0 +1,24 @@
+transmission:
+  image: transmission:latest
+  restart: always
+  ports:
+    - "9091:9091"
+    - "51413:51413"
+    - "51413:51413/udp"
+  environment:
+    - ADMIN_USER=@username@
+    - ADMIN_PASS=@password@
+  volumes:
+    - volumes/transmission/downloads:/var/lib/transmission-daemon/downloads
+    - volumes/transmission/incomplete:/var/lib/transmission-daemon/incomplete
+    - volumes/transmission/resume:/etc/transmission-daemon/resume
+    - volumes/transmission/torrents:/etc/transmission-daemon/torrents
+
+plex:
+  image: wernight/plex-media-server:latest
+  restart: always
+  volumes:
+    - volumes/transmission/downloads:/media
+    - volumes/plex/plex-config:/config
+  ports:
+    - "32400:32400"
