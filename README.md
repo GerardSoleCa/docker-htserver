@@ -11,14 +11,14 @@ Clone this repository
 $ git clone https://github.com/GerardSoleCa/docker-htserver.git
 ```
 
-## Third... 
-Start the whole thing! It will prompt your for your desired username and password for Transmission website
+## Second... 
+Start the whole thing! It will prompt your for your desired username and password for Transmission website. Remember that once its setup, although new passwords are asked, the first one will be stored in *docker-compose.yml* file
 
 ```bash
 $ chmod +x 
 $ ./start.sh
 ```
 
-## Four...
+## Third...
 Configure Plex. Here it's up to you to search in internet how to connect to the server, configure accounts, libraries etc. Good luck! :D
 
