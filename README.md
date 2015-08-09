@@ -12,7 +12,7 @@ $ git clone https://github.com/GerardSoleCa/docker-htserver.git
 ```
 
 ## Second... 
-Start the whole thing! It will prompt your for your desired username and password for Transmission website. Remember that once its setup, although new passwords are asked, the first one will be stored in *docker-compose.yml* file
+Start the whole thing! It will ask you to setup a username and password for Transmission. Only on the first run.
 
 ```bash
 $ chmod +x 
